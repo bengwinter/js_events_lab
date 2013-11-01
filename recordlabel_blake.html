@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+
+    function changeColor(element)  {  
+        var links = document.getElementById('artists-links').getElementsByTagName("li");  
+        var i = 0;
+        for (; i < links.length ; i ++) {  
+          links[i].style.backgroundColor='white';
+        };  
+        element.style.backgroundColor='red';  
+        };
+      }; 
+
+    function showDiv(id) {
+      var artists = document.getElementById('artists').getElementsByTagName('li');
+      var i = 0;
+      for (; i < artists.length; i ++)
+        artists[i].style.display = 'none';
+    };
+      document.getElementById(id).style.display = "block";
+    };
+
+    </script>
+  </head>
+
+  <body>
+
+  <ul>
+  <li onclick="changeColor(this); showDiv('artist1')">Artist 1</li>
+  <li onclick="changeColor(this); showDiv('artist2')">Artist 2</li>
+  <li onclick="changeColor(this); showDiv('artist3')">Artist 3</li>
+  <li onclick="changeColor(this); showDiv('artist4')">Artist 4</li>
+  </ul>
+
+  <div id="artists">
+  <ul>
+  <li id="artist1" style="display: none">Artist 1 description</li>
+  <li id="artist2" style="display: none">Artist 2 description</li>
+  <li id="artist3" style="display: none">Artist 3 description</li>
+  <li id="artist4" style="display: none">Artist 4 description</li>
+  </ul>
+  </div>
+
+</body>
+
+</html>

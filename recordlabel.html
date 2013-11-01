@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+        function mOver(obj)
+        {
+         obj.style.backgroundColor = "#FF0";
+        }
+
+        function mOut(obj)
+        {
+          obj.style.backgroundColor="#FFFFFF"
+        }
+
+        function onClickm()
+        {
+          document.getElementById("marianhill").style.visibility="visible";
+          document.getElementById("youngbloodz").style.visibility="hidden";
+          document.getElementById("sutton").style.visibility="hidden";
+          document.getElementById("erikhassle").style.visibility="hidden";
+        }
+        function onClicky()
+        {
+          document.getElementById("marianhill").style.visibility="hidden";
+          document.getElementById("youngbloodz").style.visibility="visible";
+          document.getElementById("sutton").style.visibility="hidden";
+          document.getElementById("erikhassle").style.visibility="hidden";
+        }
+        function onClickw()
+        {
+          document.getElementById("marianhill").style.visibility="hidden";
+          document.getElementById("youngbloodz").style.visibility="hidden";
+          document.getElementById("sutton").style.visibility="visible";
+          document.getElementById("erikhassle").style.visibility="hidden";
+        }
+        function onClicke()
+        {
+          document.getElementById("marianhill").style.visibility="hidden";
+          document.getElementById("youngbloodz").style.visibility="hidden";
+          document.getElementById("sutton").style.visibility="hidden";
+          document.getElementById("erikhassle").style.visibility="visible";        }
+      </script>
+  </head>
+  <body>
+    <ul>
+      <li onmouseover="mOver(this)" onmouseout="mOut(this)" onClick="onClickm()">Marian Hill</li>
+      <li onmouseover="mOver(this)" onmouseout="mOut(this)" onClick="onClicky()">YoungBloodZ</li>
+      <li onmouseover="mOver(this)" onmouseout="mOut(this)" onClick="onClicke()">Erik Hassle</li>
+      <li onmouseover="mOver(this)" onmouseout="mOut(this)" onClick="onClickw()">Willie Sutton</li>
+    </ul>
+    <div id="marianhill" style='visibility:hidden; background-color:red;'>
+    <p>Marian is real good</p>
+    </div>
+    <div id="youngbloodz" style='visibility:hidden; background-color:red;'>
+      <p>Youngbloodz is cool</p>
+    </div>
+    <div id="sutton" style='visibility:hidden; background-color:red;'>
+      <p>Sutton is amaaaazing</p>
+    </div>
+    <div id="erikhassle" style='visibility:hidden; background-color:red;'>
+      <p>Hassle is unique</p>
+    </div>
+  </body>
+</html>
