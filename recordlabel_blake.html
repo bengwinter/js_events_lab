@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script>
+<head>
+  <script>
 
-    function changeColor(element)  {  
-        var links = document.getElementById('artists-links').getElementsByTagName("li");  
-        var i = 0;
-        for (; i < links.length ; i ++) {  
-          links[i].style.backgroundColor='white';
-        };  
-        element.style.backgroundColor='red';  
-        };
-      }; 
-
-    function showDiv(id) {
+    function highlight_artist(event) {
+      var artists_li = event.target;
       var artists = document.getElementById('artists').getElementsByTagName('li');
       var i = 0;
-      for (; i < artists.length; i ++)
+      for (; i < artists.length; i ++) {
         artists[i].style.display = 'none';
+      };
+      document.getElementById(artists_li.id + '_d').style.display = "block";
+      var links = document.getElementById('artists-links').getElementsByTagName("li");  
+      var i = 0;
+      for (; i < links.length ; i ++) {  
+        links[i].style.backgroundColor = 'white';  
+      };
+      artists_li.style.backgroundColor='red';
     };
-      document.getElementById(id).style.display = "block";
-    };
 
-    </script>
-  </head>
+  </script>
+</head>
 
-  <body>
-
-  <ul>
-  <li onclick="changeColor(this); showDiv('artist1')">Artist 1</li>
-  <li onclick="changeColor(this); showDiv('artist2')">Artist 2</li>
-  <li onclick="changeColor(this); showDiv('artist3')">Artist 3</li>
-  <li onclick="changeColor(this); showDiv('artist4')">Artist 4</li>
+<body>
+  <ul id="artists-links">
+    <li id="art1" onclick="highlight_artist(event)">Artist 1</li>
+    <li id="art2" onclick="highlight_artist(event)">Artist 2</li>
+    <li id="art3" onclick="highlight_artist(event)">Artist 3</li>
+    <li id="art4" onclick="highlight_artist(event)">Artist 4</li>
   </ul>
 
-  <div id="artists">
-  <ul>
-  <li id="artist1" style="display: none">Artist 1 description</li>
-  <li id="artist2" style="display: none">Artist 2 description</li>
-  <li id="artist3" style="display: none">Artist 3 description</li>
-  <li id="artist4" style="display: none">Artist 4 description</li>
+  <ul id="artists">
+    <li id="art1_d" style="display: none">Artist 1 description</li>
+    <li id="art2_d" style="display: none">Artist 2 description</li>
+    <li id="art3_d" style="display: none">Artist 3 description</li>
+    <li id="art4_d" style="display: none">Artist 4 description</li>
   </ul>
-  </div>
 
 </body>
 
-</html>
+</html> 
